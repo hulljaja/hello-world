@@ -1,5 +1,5 @@
 pipeline {
-agent = "master||linux"
+	agent { label 'master' }
 stages {
             stage ('Deploy') {
                 steps {
