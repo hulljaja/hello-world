@@ -1,5 +1,5 @@
 pipeline {
-            stage ('Deploy') {
+            stages ('Deploy') {
                 steps {
                   withCredentials([
                      file(credentialsId: 'mai-microservice', variable: 'keyfile')
