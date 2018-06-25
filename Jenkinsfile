@@ -1,10 +1,5 @@
 pipeline {
-	   agent {
-	    node {
-        	label 'Scott Workspace'
-        	customWorkspace '/var/lib/jenkins/workspace/'
-    }
-}
+agent = "master||linux"
 stages {
             stage ('Deploy') {
                 steps {
