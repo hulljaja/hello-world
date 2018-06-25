@@ -2,7 +2,7 @@ pipeline {
 	   agent none
 	   stages {
             stage ('Deploy') {
-		agent none
+		agent {label "first step"}
                 steps {
                   withCredentials([
                      file(credentialsId: 'mai-microservice', variable: 'keyfile')
