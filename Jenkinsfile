@@ -1,8 +1,12 @@
 pipeline {
-	   agent none
-	   stages {
+	   agent {
+	    node {
+        	label 'Scott Workspace'
+        	customWorkspace '/var/lib/jenkins/workspace/'
+    }
+}
+stages {
             stage ('Deploy') {
-		agent {label "first step"}
                 steps {
                   withCredentials([
                      file(credentialsId: 'mai-microservice', variable: 'keyfile')
